@@ -39,4 +39,14 @@ class Program
 
         return resultArray;
     }
+
+     // Метод для вывода массива
+    static void PrintArray(string[] array)
+    {
+        foreach (var item in array)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+    }
 }
