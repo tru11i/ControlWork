@@ -18,4 +18,25 @@ class Program
         Console.WriteLine("Новый массив:");
         PrintArray(resultArray);
     }
+
+     // Метод для фильтрации массива
+    static string[] FilterArray(string[] inputArray)
+    {
+        // Используем List для динамического добавления строк
+        System.Collections.Generic.List<string> resultList = new System.Collections.Generic.List<string>();
+
+        // Фильтрация и добавление строк в List
+        foreach (string item in inputArray)
+        {
+            if (item.Length <= 3)
+            {
+                resultList.Add(item);
+            }
+        }
+
+        // Преобразование List в массив
+        string[] resultArray = resultList.ToArray();
+
+        return resultArray;
+    }
 }
